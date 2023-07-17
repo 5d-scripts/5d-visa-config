@@ -10,7 +10,7 @@ local UNARMED_HASH = GetHashKey("WEAPON_UNARMED")
 
 -- Hearbeat is triggered every sync interval. If there is a change in the players visa stage, we will be notified.
 RegisterNetEvent("5d-visa:heartbeat", function(visaStage, stageLabel)
-    if (visaStage == Player.stage) then
+    if (visaStage == Player.visa.stage) then
         return
     end
     Player.visa.stage = visaStage
